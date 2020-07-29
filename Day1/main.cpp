@@ -18,6 +18,8 @@ int main(void)
 
     SavingsAccount::modifyInterestRate(3);
 
+    person1.Input();
+
     person1.calculateMonthlyInterest();
     cout << "Person 1 Savings Balance: " << person1.GetBalance() << endl;
 

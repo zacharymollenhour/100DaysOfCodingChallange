@@ -12,6 +12,7 @@ class SavingsAccount
 {
 private:
     float savingsBalance;
+    float interestRate;
 
 public:
     //Default Constructor
@@ -22,6 +23,8 @@ public:
     void calculateMonthlyInterest();
     static void modifyInterestRate(float value);
     float GetBalance() const {return savingsBalance; }
+    void Input();
+    //void SetInterestRate(int interest) const { interestRate = interest; }
 };
 
 
