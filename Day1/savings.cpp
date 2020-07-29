@@ -38,35 +38,6 @@ void SavingsAccount::modifyInterestRate(float value)
 }
 
 
-//Static Member function that gets the input values for all 
-//Bank account values
-void SavingsAccount::UserInput()
-{
-    float savingsBalance;
 
-    //input of bank account balance
-    cout << "Please enter the starting balance: ";
-    cin >> savingsBalance;
-
-    //loop that checks input values to be valid
-    while(savingsBalance < 0.0)
-    {
-        cout << "Invalid Balance. Please Try Again: " << endl;
-        cin >> savingsBalance;
-    }
-    
-}
-
-bool SavingsAccount::Set(float balance)
-{
-    if(savingsBalance < 0.0)
-    {
-        return false;
-    }
-    else{
-        savingsBalance = balance;
-        return true;
-    }
-}
 
 

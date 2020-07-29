@@ -1,8 +1,8 @@
-output: main.o savings.o
-	g++ main.o savings.o -o output
+output: main.o bank.o
+	g++ main.o bank.o -o output
 main.o: main.cpp
-	g++ -c main.cpp savings.h
-savings.o: savings.cpp
-	g++ -c savings.cpp
+	g++ -c main.cpp bank.h
+bank.o: bank.cpp
+	g++ -c bank.cpp
 clean:
 	rm *.o output
