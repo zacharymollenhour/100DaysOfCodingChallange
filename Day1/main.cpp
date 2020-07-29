@@ -13,12 +13,16 @@ using namespace std;
 
 int main(void)
 {
-    SavingsAccount person1(2000.00);
-    SavingsAccount person2(3000.00);
+    float savingsBalance = 0.0;
+    //input of bank account balance
+    cout << "Please enter the starting balance: ";
+    cin >> savingsBalance;
+    SavingsAccount person1(savingsBalance);
+    //person1.UserInput();
 
     SavingsAccount::modifyInterestRate(3);
 
-    person1.Input();
+    
 
     person1.calculateMonthlyInterest();
     cout << "Person 1 Savings Balance: " << person1.GetBalance() << endl;

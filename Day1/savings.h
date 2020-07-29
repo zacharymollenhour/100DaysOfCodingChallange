@@ -23,7 +23,8 @@ public:
     void calculateMonthlyInterest();
     static void modifyInterestRate(float value);
     float GetBalance() const {return savingsBalance; }
-    void Input();
+    void UserInput();
+    bool Set(float balance);
     //void SetInterestRate(int interest) const { interestRate = interest; }
 };
 

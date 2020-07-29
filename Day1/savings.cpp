@@ -20,6 +20,7 @@ SavingsAccount:: SavingsAccount(int value)
 //the annual interest rate for each user
 float SavingsAccount :: annualInterestRate = 0;
 
+
 //Member function that calculates the monthly interest 
 //by multiplying the savings Balance by annual Interest Rate
 //divided byu 12 and then adding the interest to the savings 
@@ -36,23 +37,36 @@ void SavingsAccount::modifyInterestRate(float value)
     annualInterestRate = value;
 }
 
+
 //Static Member function that gets the input values for all 
 //Bank account values
-void SavingsAccount:: Input()
+void SavingsAccount::UserInput()
 {
-    int balance;
+    float savingsBalance;
 
     //input of bank account balance
     cout << "Please enter the starting balance: ";
-    cin >> balance;
+    cin >> savingsBalance;
 
     //loop that checks input values to be valid
-    while(balance < 0)
+    while(savingsBalance < 0.0)
     {
         cout << "Invalid Balance. Please Try Again: " << endl;
-        cin >> balance;
+        cin >> savingsBalance;
     }
-    cout << balance;
+    
+}
+
+bool SavingsAccount::Set(float balance)
+{
+    if(savingsBalance < 0.0)
+    {
+        return false;
+    }
+    else{
+        savingsBalance = balance;
+        return true;
+    }
 }
 
 
