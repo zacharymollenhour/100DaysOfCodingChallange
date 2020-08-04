@@ -40,3 +40,15 @@ int binarySearch(int arr[], int left, int right, int x)
 }
 
 //main function
+int main(void)
+{
+    //Declare array with size 50
+    int arr[50];
+
+    //for loop to iterate the loop 50 times
+    for(int i=1; i<=50;i++)
+    {
+        //generate random numbers for array
+        arr[i] = (rand() % 1000) + 1;
+    }
+}
