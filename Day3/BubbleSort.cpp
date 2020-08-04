@@ -1,9 +1,14 @@
-// C++ program to implement bubble sort algorithm
+// ****************************************************************************
+// * Name: Bubble Sort cpp file ( savings.cpp filename )                      *
+// * Description: This file will perform a bubble sort algorithm on a array   *
+// * Author: Zachary Mollenhour                                               *
+// * Date: August 4th 2020 ( last modified )                                   *
+// ****************************************************************************
 
 #include <iostream>
 using namespace std;
 
-//Function to swap the values
+//Function to swap the values in the array using pointers
 void swap(int *xp, int *yp)
 {
     int temp = *xp;
@@ -12,7 +17,7 @@ void swap(int *xp, int *yp)
 }
 
 
-//Function to perform the bubble sort
+//Function to perform the bubble sort on given array
 void bubbleSort(int arr[],int n)
 {
     int i , k;
@@ -58,7 +63,10 @@ int main()
     //get size of the array
     int n = sizeof(arr)/sizeof(arr[0]);
 
+    //Call Bubble Sort Function to sort the array
     bubbleSort(arr,n);
+
+    //Print out the array
     cout << "Sorted Array: \n";
     printArray(arr,n);
     return 0;
