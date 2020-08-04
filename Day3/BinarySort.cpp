@@ -55,8 +55,13 @@ int main(void)
     //value to search for in the array
     int x = 10;
 
+    //get size of array
     int n = sizeof(arr) / sizeof(arr[0]);
+
+    //perform binary search on the array
     int result = binarySearch(arr,0,n - 1, x);
+
+    //Print out results
     (result == -1) ? cout << "Element is not present in array"
                    : cout << "Element is not present at index " << result;
     return 0;
